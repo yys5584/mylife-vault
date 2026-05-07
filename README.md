@@ -13,7 +13,9 @@
 
 ---
 
-## 시작하기 — 3분
+## 시작하기
+
+### 개발자 (CLI 사용 — 가장 빠름, 3분)
 
 ```bash
 # 1. 클론
@@ -29,20 +31,39 @@ claude          # Claude Code (권장)
 codex           # Codex CLI
 ```
 
-### Claude Code인 경우
-```
-/mylife-setup
-```
-Claude가 순서대로 질문하고 답을 9개 템플릿에 채움.
+**Claude Code**: `/mylife-setup` 입력 → 인터뷰 시작
+**Codex CLI**: `"MYLIFE 인터뷰 시작해줘"` 입력 → AGENTS.md 자동 로드
 
-### Codex CLI인 경우
-```
-"MYLIFE 인터뷰 시작해줘"
-```
-`AGENTS.md`를 자동 로드해서 같은 흐름 시작.
+### 비개발자 (Claude.ai Project — 가장 쉬움)
 
-### 그 외 LLM (수동)
-[SETUP.md](SETUP.md) 순서대로 따라가기. 답을 직접 `templates/` placeholder(`{{...}}`)에 채움.
+```
+1. https://github.com/yys5584/mylife-vault → "Code" → "Download ZIP" → 압축 풀기
+2. claude.ai 가입 (Pro $20/월 권장: 컨텍스트 큼)
+3. 좌측 "Projects" → "Create Project" → 이름 "MYLIFE"
+4. 우측 "Project knowledge" → templates/ 안 12개 .md + CLAUDE.md + AGENTS.md 업로드
+5. "Custom instructions"에 붙여넣기:
+   "이 프로젝트 파일들을 컨텍스트로 사용.
+    CLAUDE.md 룰 따르기. 빈 placeholder({{...}})는 인터뷰로 채울 것."
+6. 채팅 시작 → "MYLIFE 인터뷰 시작해줘"
+```
+
+**한계 + 보완**:
+- 사주·별자리 자동 계산 ❌ → [원광대 만세력](https://manse.wgtc.ac.kr/) + [astro.com](https://astro.com)에서 결과 받아서 Claude에 붙여넣기
+- 또는 개발자 친구한테 부탁: "이 깃허브 클론해서 setup 한 번 돌려서 결과 .md 12개 압축해줘"
+
+### 노션·옵시디언 사용자
+
+ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 LLM에 컨텍스트로 던짐. 갱신·검색은 노션·옵시디언에서.
+
+### 시간
+
+| 페이스 | 핵심 9개 | 도메인 확장 포함 |
+|---|---|---|
+| 빠르게 (한 줄 단답) | ~30분 | ~65분 |
+| 보통 (생각하며) | ~50분 | ~105분 |
+| 깊이 (사례·검증) | ~90분 | ~180분 |
+
+**처음엔 *빠르게*로 일단 다 채우고**, 분기 갱신 때 깊이 보강 추천.
 
 ---
 
