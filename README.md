@@ -15,24 +15,26 @@
 
 ## 시작하기
 
-### 개발자 (CLI 사용 — 가장 빠름, 3분)
+### 개발자 (CLI 익숙, 3분)
 
 ```bash
-# 1. 클론
 git clone https://github.com/yys5584/mylife-vault.git ~/MYLIFE
 cd ~/MYLIFE
-
-# 2. 사주·별자리 자동 계산용 의존성
 pip install -r scripts/requirements.txt
-
-# 3. CLI 진입
-claude          # Claude Code (권장)
-# 또는
-codex           # Codex CLI
+claude          # 또는 codex
 ```
 
 **Claude Code**: `/mylife-setup` 입력 → 인터뷰 시작
 **Codex CLI**: `"MYLIFE 인터뷰 시작해줘"` 입력 → AGENTS.md 자동 로드
+
+### CLI 초보자 (Python·git 처음, 30분)
+
+→ **[QUICKSTART.md](QUICKSTART.md) 따라가기**
+- Python 설치 (Mac/Windows/Linux)
+- Claude Code/Codex 설치
+- git clone 또는 ZIP 다운로드
+- pip install (권한 문제 해결법)
+- 자주 막히는 7가지 + 해결
 
 ### 비개발자 (Claude.ai Project — 가장 쉬움)
 
