@@ -58,20 +58,23 @@ vault에 접근하면 **즉시 templates/ 안 파일 상태 확인**:
 
 ## 문서 지도
 
+**중심 (응답의 1순위 근거):** 사용자가 직접 입력한 자기진단·철학·시스템·로드맵.
+**보조 (색깔만):** 사주·별자리는 사용자가 *명시적으로 요청할 때만* 참조.
+
 | 상황 | 문서 |
 |---|---|
 | 큰 결정 / 새 사이드 / 새 관계 시작 전 | `templates/philosophy.md` |
 | 매일 자문 | `templates/life_compass.md` |
 | 시스템 처방 필요 | `templates/life_os.md` |
 | 자기 진단 | `templates/self_profile.md` |
-| 사주·기질 (동양) | `templates/saju.md` |
-| 별자리·출생 차트 (서양) | `templates/zodiac.md` |
 | 충동 메시지 | `templates/relationship_protocol.md` |
 | 사이드 결정 | `templates/side_project_strategy.md` |
 | 연애 일반·궁합·결혼 필터 | `templates/love_style.md` |
 | 매수·매도·자산 배분 | `templates/investment_style.md` |
 | 이직·커리어·번아웃 | `templates/career_style.md` |
 | 시간 단위 로드맵 | `templates/roadmap.md` |
+| **(선택, 명시 요청 시만)** 사주·기질 | `templates/saju.md` |
+| **(선택, 명시 요청 시만)** 별자리·출생 차트 | `templates/zodiac.md` |
 
 ---
 
@@ -86,20 +89,30 @@ vault에 접근하면 **즉시 templates/ 안 파일 상태 확인**:
 - 새 분석 추가 ❌, 기존 자료 *연결·압축* ✓
 
 ### 사용자 데이터 기반 응답
-- `self_profile.md` 강점·약점 항상 참조
-- 응답 시 약점에 가드 깔기
-- `saju.md` 약한 오행을 `life_os.md` 처방으로 보완 제안
+- **응답 결론·처방의 근거 = 사용자 직접 입력 문서만** (`self_profile.md` / `philosophy.md` / `life_os.md` / `life_compass.md` / `roadmap.md` / `relationship_protocol.md` / `side_project_strategy.md` / 도메인 확장 3개).
+- `self_profile.md` 강점·약점 표 항상 참조. 응답 시 약점에 가드 깔기.
+- 사주·별자리는 *근거로 인용 ❌*. 사용자가 *명시적으로 요청할 때만* 참조하고, 그때도 답변 본체는 사용자 입력 위에 색깔로만 얹는다.
 
 ---
 
-## 사주·별자리 활용 룰
+## 사주·별자리 — 위치 정의 (보조 색깔만)
 
+사주·별자리는 운세 수준의 **보조 도구**. 응답의 *주축* ❌.
+
+### 언제만 참조하나
+- 사용자가 *명시적으로* 요청할 때만 (예: "내 사주 한 줄 요약", "내 별자리 빅3 해석", "올해 운 어떻게 봐").
+- 일반 결정·자문·처방·관계 질문에서는 사주·별자리 *언급 안 한다*. 답변은 `self_profile.md`/`philosophy.md`/`life_os.md` 등 사용자 입력에서 끌어온다.
+
+### 어떻게 쓰나 (요청 받았을 때)
 - `saju.md` / `zodiac.md` = 박제 데이터. **매번 재계산 ❌.**
-- 사주 계산은 `scripts/calc_saju.py`, 별자리 계산은 `scripts/calc_zodiac.py`.
-- **LLM이 직접 8자/행성 위치 추정 ❌.**
-- 해석은 응답 시점에 자유롭게 (8자·오행·십신·태양궁·달궁·상승궁·행성 → 사용자 상황 매칭)
-- *운명 결정* 어휘 ❌, *기질적 경향·강약 영역* 어휘 ✓
-- **두 시스템 교차 검증**: 공통 강한 영역 = 본질, 충돌 = 다층성
+- 사주 계산은 `scripts/calc_saju.py`, 별자리는 `scripts/calc_zodiac.py`. **LLM이 직접 8자/행성 위치 추정 ❌.**
+- *운명 결정* 어휘 ❌, *기질적 경향·강약 영역* 어휘 ✓.
+- 해석은 사용자 입력과 *비교 노트* 수준으로만. 사주가 사용자 입력을 덮어쓰면 ❌.
+
+### 명시 금지
+- 사용자 자기인식·자기 입력보다 사주·별자리를 *우선 근거*로 삼기 ❌.
+- "사주에 약하니 이걸 해야 한다" 식 처방 제안 ❌. 처방은 `life_os.md`와 사용자 자체 약점에서 도출.
+- 일반 자문 응답 끝에 사주·별자리 코멘트 *기본 첨부* ❌. 요청 없으면 안 붙인다.
 
 ---
 

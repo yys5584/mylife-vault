@@ -8,8 +8,8 @@
 [![CLI](https://img.shields.io/badge/CLI-Claude%20Code%20%7C%20Codex-orange)](AGENTS.md)
 [![No Speculation](https://img.shields.io/badge/%EC%B6%94%EC%B8%A1%20%EA%B8%88%EC%A7%80-%EC%8B%A4%EC%B8%A1%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%8C-critical)](CLAUDE.md)
 
-> 본인의 *성격·가정환경·금전·직업·사주·별자리*를 한 번 채워두면, AI가 본인에 맞춰 답하는 vault.
-> 큰 결정 전·충동 시점·매일 자문에 꺼내쓴다.
+> 본인의 *성격·가정환경·금전·직업·관계·로드맵*을 한 번 채워두면, AI가 본인 입력을 1순위 근거로 답하는 vault.
+> 큰 결정 전·충동 시점·매일 자문에 꺼내쓴다. (사주·별자리는 운세 수준의 *보조 색깔*로만 — 명시 요청 시에만)
 
 ---
 
@@ -59,13 +59,13 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 ### 시간
 
-| 페이스 | 핵심 9개 | 도메인 확장 포함 |
-|---|---|---|
-| 빠르게 (한 줄 단답) | ~30분 | ~65분 |
-| 보통 (생각하며) | ~50분 | ~105분 |
-| 깊이 (사례·검증) | ~90분 | ~180분 |
+| 페이스 | 핵심 7개 | 도메인 확장 포함 | 보조(사주·별자리) 포함 |
+|---|---|---|---|
+| 빠르게 (한 줄 단답) | ~25분 | ~55분 | +10분 |
+| 보통 (생각하며) | ~45분 | ~95분 | +10분 |
+| 깊이 (사례·검증) | ~80분 | ~165분 | +15분 |
 
-**처음엔 *빠르게*로 일단 다 채우고**, 분기 갱신 때 깊이 보강 추천.
+**처음엔 *빠르게*로 일단 다 채우고**, 분기 갱신 때 깊이 보강 추천. 사주·별자리는 관심 있을 때만 채워도 됨.
 
 ---
 
@@ -73,19 +73,19 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 12개 마크다운 문서로 구성된 **인생 운영체제**. 한 번 채우면 어떤 LLM이든 이 폴더를 컨텍스트로 받아 본인 맞춤 답변.
 
-### 핵심 9개 (필수)
+> **응답의 1순위 근거 = 사용자 본인이 직접 채운 문서.** 사주·별자리는 운세 수준의 *보조 색깔*이며, 사용자가 명시적으로 요청할 때만 꺼낸다.
 
-| 문서 | 용도 | 자동/수동 |
-|---|---|---|
-| [philosophy.md](templates/philosophy.md) | 인생 철학 (WHY/WHAT/HOW) | 수동 + 사주·별자리 자동 매칭 |
-| [self_profile.md](templates/self_profile.md) | 자기 진단 + 가정환경·직업·신경 | 수동 |
-| [saju.md](templates/saju.md) | 사주 8자 + 십신 + 12운성 + 공망 + 신살 + 대운 + 세운 | **자동** |
-| [zodiac.md](templates/zodiac.md) | 출생 차트 (태양·달·상승궁 + 행성 9개) | **자동** |
-| [life_os.md](templates/life_os.md) | 6 레이어 통합 시스템 (신체→정체성) | 수동 (본인 적용 부분만) |
-| [life_compass.md](templates/life_compass.md) | 매일 보는 한 페이지 컴파스 | 수동 |
-| [roadmap.md](templates/roadmap.md) | Daily → Yearly 시간 단위 | 수동 |
-| [relationship_protocol.md](templates/relationship_protocol.md) | 관계 룰 (사건·침묵·메시지·다음 관계) | 수동 (해당 시) |
-| [side_project_strategy.md](templates/side_project_strategy.md) | 사이드 운영 전략 | 수동 (해당 시) |
+### 핵심 7개 (필수, 사용자 직접 입력)
+
+| 문서 | 용도 |
+|---|---|
+| [philosophy.md](templates/philosophy.md) | 인생 철학 (WHY/WHAT/HOW) |
+| [self_profile.md](templates/self_profile.md) | 자기 진단 + 가정환경·직업·신경 |
+| [life_os.md](templates/life_os.md) | 6 레이어 통합 시스템 (신체→정체성) |
+| [life_compass.md](templates/life_compass.md) | 매일 보는 한 페이지 컴파스 |
+| [roadmap.md](templates/roadmap.md) | Daily → Yearly 시간 단위 |
+| [relationship_protocol.md](templates/relationship_protocol.md) | 관계 룰 (사건·침묵·메시지·다음 관계) — 해당 시 |
+| [side_project_strategy.md](templates/side_project_strategy.md) | 사이드 운영 전략 — 해당 시 |
 
 ### 도메인 확장 3개 (선택, 깊이)
 
@@ -94,6 +94,15 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 | [love_style.md](templates/love_style.md) | 연애 스타일 — 애착 유형·궁합·데이트 룰·결혼 결정 필터 |
 | [investment_style.md](templates/investment_style.md) | 투자 스타일 — 리스크·자산 배분·매매 트리거·위험 신호 |
 | [career_style.md](templates/career_style.md) | 직업 스타일 — 일하는 방식·번아웃 패턴·이직 5필터 |
+
+### 보조 도구 2개 (선택, 운세 색깔용)
+
+> 응답의 *근거*가 아니라 *색깔*. AI는 명시 요청 시에만 참조하고, 일반 자문에는 끼지 않는다. 자세한 룰은 [CLAUDE.md](CLAUDE.md) "사주·별자리 — 위치 정의" 참조.
+
+| 문서 | 용도 | 자동/수동 |
+|---|---|---|
+| [saju.md](templates/saju.md) | 사주 8자 + 십신 + 12운성 + 공망 + 신살 + 대운 + 세운 | **자동** (`scripts/calc_saju.py`) |
+| [zodiac.md](templates/zodiac.md) | 출생 차트 (태양·달·상승궁 + 행성 9개) | **자동** (`scripts/calc_zodiac.py`) |
 
 ---
 
@@ -151,14 +160,16 @@ python tests/test_zodiac_regression.py
 
 ## 사용 시나리오
 
+기본 시나리오는 사용자 입력 문서만으로 답한다. 사주·별자리는 *명시 요청* 시에만 따로 꺼낸다.
+
 | 상황 | LLM에게 | 작동 |
 |---|---|---|
 | 큰 결정 (이직·이사·결혼·창업) | "이 결정 어떻게 봐?" | `philosophy.md` 3개 축 + `life_compass.md` 5필터 |
 | 충동 메시지 | "이 메시지 보낼까?" | `relationship_protocol.md` 6번 금지 패턴 필터 |
 | 아침 자문 | "오늘 자문 해줘" | `life_compass.md` 매일 자문 3개 |
 | 사이드 시작 충동 | "새 사이드 시작해도 될까?" | `side_project_strategy.md` One Project Rule |
-| 사주 깊이 해석 | "내 사주 한 줄 요약" / "2027년 어떻게 봐" | `saju.md` 박제 + 세운 |
-| 별자리 해석 | "내 빅3 조합 해석" | `zodiac.md` 태양궁·달궁·상승궁 |
+| **(보조, 명시 요청 시만)** 사주 해석 | "내 사주 한 줄 요약" / "2027년 어떻게 봐" | `saju.md` 박제 + 세운 |
+| **(보조, 명시 요청 시만)** 별자리 해석 | "내 빅3 조합 해석" | `zodiac.md` 태양궁·달궁·상승궁 |
 
 ---
 
@@ -242,8 +253,7 @@ mylife-vault/
 
 ## Disclaimer
 
-- 사주·별자리는 본인의 **기질적 경향**과 **강약 영역**을 보는 도구입니다. *운명 결정* 도구 ❌.
-- 약한 영역은 [life_os.md](templates/life_os.md) 6 레이어 시스템으로 *보완 가능*.
+- 사주·별자리는 운세 수준의 **보조 도구**입니다. *답변의 근거* ❌, *운명 결정* ❌. 본인이 채운 자기진단·철학·시스템이 1순위.
 - 인생의 큰 결정(이직·결혼·이주·치료 등)을 사주·별자리만으로 내리지 마세요. 외부 sounding board(친구·전문가) 1인은 별도로.
 - 정신건강 진단 자가 평가 ❌. 의심 시 정신건강의학과 또는 임상심리사 상담.
 
