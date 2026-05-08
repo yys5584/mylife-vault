@@ -61,9 +61,11 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 | 페이스 | 핵심 7개 | 도메인 확장 포함 | 보조(사주·별자리) 포함 |
 |---|---|---|---|
-| 빠르게 (한 줄 단답) | ~25분 | ~55분 | +10분 |
-| 보통 (생각하며) | ~45분 | ~95분 | +10분 |
-| 깊이 (사례·검증) | ~80분 | ~165분 | +15분 |
+| 빠르게 (한 줄 단답) | ~30분 | ~60분 | +10분 |
+| 보통 (생각하며) | ~50분 | ~100분 | +10분 |
+| 깊이 (사례·검증) | ~90분 | ~175분 | +15분 |
+
+> 섹션 3 (인생 철학 = 우선순위 1위 + 진짜 이유 + 달성 후 그림)이 인터뷰 전체 1순위 무거움. 시간 들더라도 빠뜨리지 말 것.
 
 **처음엔 *빠르게*로 일단 다 채우고**, 분기 갱신 때 깊이 보강 추천. 사주·별자리는 관심 있을 때만 채워도 됨.
 
@@ -79,7 +81,7 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 | 문서 | 용도 |
 |---|---|
-| [philosophy.md](templates/philosophy.md) | 인생 철학 (WHY/WHAT/HOW) |
+| [philosophy.md](templates/philosophy.md) | **인생 우선순위 1위 + 진짜 이유 + 달성 후 그림** + WHY/WHAT/HOW. *vault 전체의 본질 동력* |
 | [self_profile.md](templates/self_profile.md) | 자기 진단 + 가정환경·직업·신경 |
 | [life_os.md](templates/life_os.md) | 6 레이어 통합 시스템 (신체→정체성) |
 | [life_compass.md](templates/life_compass.md) | 매일 보는 한 페이지 컴파스 |
@@ -164,7 +166,7 @@ python tests/test_zodiac_regression.py
 
 | 상황 | LLM에게 | 작동 |
 |---|---|---|
-| 큰 결정 (이직·이사·결혼·창업) | "이 결정 어떻게 봐?" | `philosophy.md` 3개 축 + `life_compass.md` 5필터 |
+| 큰 결정 (이직·이사·결혼·창업) | "이 결정 어떻게 봐?" | `philosophy.md` 우선순위 1위 + 3개 축 + `life_compass.md` 5필터 |
 | 충동 메시지 | "이 메시지 보낼까?" | `relationship_protocol.md` 6번 금지 패턴 필터 |
 | 아침 자문 | "오늘 자문 해줘" | `life_compass.md` 매일 자문 3개 |
 | 사이드 시작 충동 | "새 사이드 시작해도 될까?" | `side_project_strategy.md` One Project Rule |
@@ -209,7 +211,7 @@ mylife-vault/
 ├── SETUP.md                        # 수동 인터뷰 가이드
 ├── LICENSE                         # MIT
 ├── .gitignore                      # de421.bsp, __pycache__ 등 제외
-├── templates/                      # 12개 인생 템플릿 (핵심 9 + 도메인 3)
+├── templates/                      # 12개 인생 템플릿 (핵심 7 + 도메인 3 + 보조 2)
 │   ├── philosophy.md
 │   ├── self_profile.md
 │   ├── saju.md                     # 동양 — sajupy + lunar-python
