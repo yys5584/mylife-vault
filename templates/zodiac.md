@@ -1,8 +1,8 @@
 # 별자리 — 출생 차트 (Natal Chart)
 
-> 양력 생년월일시 + 출생지 → 행성 12궁 배치 자동 계산.
-> `scripts/calc_zodiac.py`로 채워집니다 (skyfield + NASA JPL ephemeris 기반).
-> **계산은 박제, 해석은 on-demand.**
+양력 생년월일시 + 출생지에서 행성 12궁 배치를 자동 계산.
+`scripts/calc_zodiac.py`로 채워진다 (skyfield + NASA JPL ephemeris 기반).
+계산은 박제, 해석은 on-demand.
 
 ---
 
@@ -41,22 +41,22 @@
 
 ## 활용 — 다른 문서와 연결
 
-- **태양궁** → [philosophy.md](philosophy.md)의 *3개 축* 검증
-- **달궁** → [self_profile.md](self_profile.md)의 *감정 패턴* 진단
-- **부족 원소** → [life_os.md](life_os.md)의 *6 레이어*로 보완
-- **상승궁** → [life_compass.md](life_compass.md)의 *외부 첫인상*
+- 태양궁은 [philosophy.md](philosophy.md)의 3개 축을 검증
+- 달궁은 [self_profile.md](self_profile.md)의 감정 패턴을 진단
+- 부족 원소는 [life_os.md](life_os.md)의 6 레이어로 보완
+- 상승궁은 [life_compass.md](life_compass.md)의 외부 첫인상
 
 ---
 
 ## 사주와의 차이
 
-- **사주** ([saju.md](saju.md)): 한국·동양 — 천간지지·오행
-- **별자리** (이 문서): 서양 — 황도 12궁·행성·원소
-- 두 시스템은 *다른 좌표계*. 일치하는 부분 = 본질 강함, 충돌하는 부분 = 본인 안의 다층성.
+- 사주 ([saju.md](saju.md)): 한국·동양 — 천간지지·오행
+- 별자리 (이 문서): 서양 — 황도 12궁·행성·원소
+- 두 시스템은 다른 좌표계다. 일치하는 부분은 본질이 강하다는 신호, 충돌하는 부분은 사용자 안의 다층성을 보여준다
 
 ---
 
 ## 한 줄
 
-> **별자리는 *우주의 시계*가 출생 순간 본인에게 새긴 도장.**
-> 운명 결정 ❌. *기질의 청사진*.
+별자리는 우주의 시계가 출생 순간 사용자에게 새긴 도장.
+운명을 결정하지 않는다. 기질의 청사진이다.
