@@ -8,7 +8,7 @@
 [![CLI](https://img.shields.io/badge/CLI-Claude%20Code%20%7C%20Codex-orange)](AGENTS.md)
 [![No Speculation](https://img.shields.io/badge/%EC%B6%94%EC%B8%A1%20%EA%B8%88%EC%A7%80-%EC%8B%A4%EC%B8%A1%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%8C-critical)](CLAUDE.md)
 
-성격·가정환경·금전·직업·관계·로드맵을 한 번 채워두면 AI가 사용자 입력을 1순위 근거로 답해준다. 큰 결정 전, 충동 시점, 매일 자문에 꺼내쓴다.
+성격·가정환경·금전·직업·관계·로드맵을 한 번 채워두면 AI가 사용자 입력을 1순위 근거로 답해준다. 인터뷰 마지막에 셋업 보고서가 나오고, 이어서 영역별(연인·직업·사이드·돈·친구·가족) 깊이 풀이를 받을 수 있다.
 
 사주·별자리는 운세 수준의 참고 톤. 명시 요청할 때만 답변에 반영한다.
 
@@ -167,16 +167,18 @@ python tests/test_zodiac_regression.py
 
 ## 사용 시나리오
 
-기본 시나리오는 사용자 입력 문서만으로 답한다. 사주·별자리는 명시 요청 시에만 따로 꺼낸다.
+인터뷰가 끝나면 셋업 완료 보고서가 나오고, 이어서 영역별 깊이 풀이 메뉴가 뜬다. 사주·별자리는 명시 요청 시에만 같이 얹는다.
 
-| 상황 | LLM에게 | 작동 |
+| 영역 | LLM에게 | 작동 |
 |---|---|---|
-| 큰 결정 (이직·이사·결혼·창업) | "이 결정 어떻게 봐?" | `philosophy.md` 우선순위 1위 + 3개 축 + `life_compass.md` 5필터 |
-| 충동 메시지 | "이 메시지 보낼까?" | `relationship_protocol.md` 6번 금지 패턴 필터 |
-| 아침 자문 | "오늘 자문 해줘" | `life_compass.md` 매일 자문 3개 |
-| 사이드 시작 충동 | "새 사이드 시작해도 될까?" | `side_project_strategy.md` One Project Rule |
-| (보조, 명시 요청 시만) 사주 해석 | "내 사주 한 줄 요약" / "2027년 어떻게 봐" | `saju.md` 박제 + 세운 |
-| (보조, 명시 요청 시만) 별자리 해석 | "내 빅3 조합 해석" | `zodiac.md` 태양궁·달궁·상승궁 |
+| 나와 맞는 연인 / 위험한 유형 | "나와 맞는 연인 유형 봐줘" | `love_style.md` + `relationship_protocol.md` + `self_profile.md` |
+| 나와 맞는 직업·역할 | "나에게 맞는 직업 봐줘" | `career_style.md` + `self_profile.md` + `philosophy.md` |
+| 나와 맞는 사이드 방향 | "어떤 사이드가 맞을까" | `side_project_strategy.md` + `self_profile.md` |
+| 내 돈 그릇·재물 패턴 | "내 돈 그릇 어때" | `investment_style.md` + `philosophy.md` + `self_profile.md` |
+| 친구·동료 함정 | "내가 자주 빠지는 인간관계 함정 봐줘" | `self_profile.md` 위험 신호 |
+| 가족 영향 | "가족이 나에게 어떻게 영향 줬어" | `self_profile.md` 형성 사건 |
+| (보조, 명시 요청 시만) 사주 같이 보기 | "사주로도 봐줘" | `saju.md` 박제 + 세운 |
+| (보조, 명시 요청 시만) 별자리 같이 보기 | "별자리로도 봐줘" | `zodiac.md` 태양궁·달궁·상승궁 |
 
 ---
 
