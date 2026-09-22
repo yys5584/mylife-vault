@@ -57,6 +57,8 @@ vault에 들어오면 즉시 `templates/` 안 파일 상태 확인.
 
 그러면 [SETUP.md](SETUP.md) 따른다. 질문 시퀀스가 거기 정의돼 있다.
 
+인터뷰는 질문 12개를 4개씩 3라운드로 던지고 끝낸다. 10분이 목표다. 질문을 하나씩 쪼개거나, 답에 살 붙이는 되물음을 하거나, 12개를 넘겨 묻지 않는다.
+
 ---
 
 ## 문서 지도
@@ -169,7 +171,7 @@ vault에 들어오면 즉시 `templates/` 안 파일 상태 확인.
 
 ### 사용자 데이터 기반 응답
 
-응답의 결론·처방 근거는 사용자가 직접 입력한 문서에서만 뽑는다. `self_profile.md` / `philosophy.md` / `life_os.md` / `life_compass.md` / `roadmap.md` / `relationship_protocol.md` / `side_project_strategy.md` / 도메인 확장 3개.
+응답의 결론·처방 근거는 사용자가 직접 입력한 문서에서만 뽑는다. `self_profile.md` / `philosophy.md` / `life_os.md` / `life_compass.md` / `roadmap.md` / `relationship_protocol.md` / `side_project_strategy.md` / 확장 문서 (love·career·investment).
 
 - `self_profile.md` 강점·약점 표 항상 참조. 응답할 때 약점에 가드 깐다
 - 사주·별자리는 근거로 인용하지 않는다. 사용자가 명시 요청할 때만 참조. 그때도 답변 본체는 사용자 입력 위에 색깔로만 얹는다

@@ -8,7 +8,7 @@
 [![CLI](https://img.shields.io/badge/CLI-Claude%20Code%20%7C%20Codex-orange)](AGENTS.md)
 [![No Speculation](https://img.shields.io/badge/%EC%B6%94%EC%B8%A1%20%EA%B8%88%EC%A7%80-%EC%8B%A4%EC%B8%A1%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%8C-critical)](CLAUDE.md)
 
-성격·가정환경·금전·직업·관계·로드맵을 한 번 채워두면 AI가 사용자 입력을 1순위 근거로 답해준다. 인터뷰 마지막에 셋업 보고서가 나오고, 이어서 영역별(연인·직업·사이드·돈·친구·가족) 깊이 풀이를 받을 수 있다.
+성격·가정환경·금전·직업·관계·로드맵을 10분 인터뷰로 채워두면 AI가 사용자 입력을 1순위 근거로 답해준다. 질문 12개를 4개씩 세 번 묻는다. 끝나면 셋업 보고서가 나오고, 이어서 영역별(연인·직업·사이드·돈·친구·가족) 깊이 풀이를 받을 수 있다.
 
 사주·별자리는 운세 수준의 참고 톤. 명시 요청할 때만 답변에 반영한다.
 
@@ -62,15 +62,17 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 ### 시간
 
-| 페이스 | 핵심 7개 | 도메인 확장 포함 | 보조(사주·별자리) 포함 |
-|---|---|---|---|
-| 빠르게 (한 줄 단답) | ~30분 | ~60분 | +10분 |
-| 보통 (생각하며) | ~50분 | ~100분 | +10분 |
-| 깊이 (사례·검증) | ~90분 | ~175분 | +15분 |
+인터뷰는 질문 12개, 4개씩 3라운드. 10분이면 끝난다.
 
-섹션 3 (인생 철학 = 우선순위 1위 + 진짜 이유 + 달성 후 그림)이 인터뷰 전체에서 가장 무겁다. 시간 들더라도 빠뜨리지 않는다.
+| 무엇 | 시간 |
+|---|---|
+| 핵심 인터뷰 (질문 12개) | 10분 |
+| 영역별 확장 (연인·직업·돈 등, 고를 때만) | 영역당 3~5분 |
+| 사주·별자리 (선택) | 5분 |
 
-처음엔 빠르게로 일단 다 채우고, 분기 갱신 때 깊이 보강 추천. 사주·별자리는 관심 있을 때만 채워도 된다.
+라운드 2의 1순위 질문(1순위 한 단어 + 진짜 이유 + 이루면 보이는 장면)이 전체 방향타다. 다른 걸 패스해도 이건 채운다.
+
+확장 문서 7개는 인터뷰에서 안 묻는다. 보고서 다음 메뉴에서 영역을 고르면 그때 질문 2~3개로 채운다.
 
 ---
 
@@ -80,25 +82,27 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 응답의 1순위 근거는 사용자가 직접 채운 문서. 사주·별자리는 운세 수준의 참고 톤이며 명시 요청 시에만 꺼낸다.
 
-### 핵심 7개 (필수, 사용자 직접 입력)
+### 10분 인터뷰로 채워지는 5개
 
 | 문서 | 용도 |
 |---|---|
-| [philosophy.md](templates/philosophy.md) | 인생 우선순위 1위 + 진짜 이유 + 달성 후 그림 + WHY·WHAT·HOW. vault 전체의 동력 |
-| [self_profile.md](templates/self_profile.md) | 자기 진단 + 가정환경·직업·신경 |
+| [philosophy.md](templates/philosophy.md) | 인생 1순위 + 진짜 이유 + 이루면 보이는 장면 + WHY·WHAT·HOW. vault 전체의 동력 |
+| [self_profile.md](templates/self_profile.md) | 자기 진단 — 강점·약점·반복 루프·위험 신호 |
 | [life_os.md](templates/life_os.md) | 6 레이어 통합 시스템 (신체부터 정체성까지) |
 | [life_compass.md](templates/life_compass.md) | 매일 보는 한 페이지 컴파스 |
 | [roadmap.md](templates/roadmap.md) | Daily부터 Yearly까지 시간 단위 |
-| [relationship_protocol.md](templates/relationship_protocol.md) | 관계 룰 (사건·침묵·메시지·다음 관계). 해당 시 |
-| [side_project_strategy.md](templates/side_project_strategy.md) | 사이드 운영 전략. 해당 시 |
 
-### 도메인 확장 3개 (선택, 깊이)
+### 나중에 고를 때 채우는 5개
+
+인터뷰에서 안 묻는다. 보고서 다음 메뉴에서 영역을 고르면 그때 질문 2~3개로 채운다. 관심 없으면 비어 있어도 나머지가 정상 작동한다.
 
 | 문서 | 용도 |
 |---|---|
 | [love_style.md](templates/love_style.md) | 연애 스타일 — 애착 유형·궁합·데이트 룰·결혼 결정 필터 |
-| [investment_style.md](templates/investment_style.md) | 투자 스타일 — 리스크·자산 배분·매매 트리거·위험 신호 |
 | [career_style.md](templates/career_style.md) | 직업 스타일 — 일하는 방식·번아웃 패턴·이직 5필터 |
+| [investment_style.md](templates/investment_style.md) | 투자 스타일 — 리스크·자산 배분·매매 트리거·위험 신호 |
+| [relationship_protocol.md](templates/relationship_protocol.md) | 관계 룰 (사건·침묵·메시지·다음 관계) |
+| [side_project_strategy.md](templates/side_project_strategy.md) | 사이드 운영 전략 |
 
 ### 보조 도구 2개 (선택, 운세 색깔용)
 
@@ -219,10 +223,10 @@ mylife-vault/
 ├── README.md                       # 지금 보는 문서
 ├── CLAUDE.md                       # Claude Code 에이전트 룰 (절대 룰 포함)
 ├── AGENTS.md                       # Codex CLI 에이전트 룰
-├── SETUP.md                        # 수동 인터뷰 가이드
+├── SETUP.md                        # 10분 인터뷰 가이드 (질문 12개)
 ├── LICENSE                         # MIT
 ├── .gitignore                      # de421.bsp, __pycache__ 등 제외
-├── templates/                      # 12개 인생 템플릿 (핵심 7 + 도메인 3 + 보조 2)
+├── templates/                      # 12개 인생 템플릿 (인터뷰 5 + 확장 5 + 보조 2)
 │   ├── philosophy.md
 │   ├── self_profile.md
 │   ├── saju.md                     # 동양 — sajupy + lunar-python
