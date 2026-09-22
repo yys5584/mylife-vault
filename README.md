@@ -98,7 +98,7 @@ ZIP 다운로드 → 12개 .md 파일 import → 페이지 본문 복사해서 L
 
 | 문서 | 용도 |
 |---|---|
-| [love_style.md](templates/love_style.md) | 연애 스타일 — 애착 유형·궁합·데이트 룰·결혼 결정 필터 |
+| [love_style.md](templates/love_style.md) | 연애 스타일 — 애착 유형·연애 패턴·데이트 룰·결혼 필터 |
 | [career_style.md](templates/career_style.md) | 직업 스타일 — 일하는 방식·번아웃 패턴·이직 5필터 |
 | [investment_style.md](templates/investment_style.md) | 투자 스타일 — 리스크·자산 배분·매매 트리거·위험 신호 |
 | [relationship_protocol.md](templates/relationship_protocol.md) | 관계 룰 (사건·침묵·메시지·다음 관계) |
